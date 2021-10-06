@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Pokemons from "./components/Pokemons";
+import Title from "./components/Title";
+const styles = {
+  div: {
+    margin: '0px', 
+    padding: '0',  
+    margin: 'auto', 
+    textAlign: 'center'
+  }, 
+  container: {
+    backgroundImage: "linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)", 
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div  style={styles.container}>
+      <Title/>
+      <div style={styles.div}>
+        <Pokemons/>
+      </div>
     </div>
   );
 }
